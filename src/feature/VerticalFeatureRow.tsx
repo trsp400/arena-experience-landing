@@ -1,4 +1,5 @@
 import className from 'classnames';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 type IVerticalFeatureRowProps = {
@@ -7,6 +8,7 @@ type IVerticalFeatureRowProps = {
   image: string;
   imageAlt: string;
   reverse?: boolean;
+  url?: string;
 };
 
 const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
@@ -30,7 +32,15 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       <div className="w-full p-6 sm:w-1/2">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        {
+          props.url ? (
+            <Link href={props.url} target='__blank'>
+              <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+            </Link>
+          ) : (
+            <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+          )
+        }
       </div>
     </div>
   );

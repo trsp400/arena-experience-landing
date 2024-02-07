@@ -5,6 +5,7 @@ import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
 import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
+// import { Logo } from './Logo';
 import { Logo } from './Logo';
 
 const Hero = () => (
@@ -12,12 +13,12 @@ const Hero = () => (
     <Section yPadding="py-6">
       <NavbarTwoColumns logo={<Logo xl />}>
         <li>
-          <Link href="https://github.com/ixartz/Next-JS-Landing-Page-Starter-Template">
-            GitHub
+          <Link href="https://arena-experience-frontend.vercel.app/register" target='__blank'>
+            Criar conta
           </Link>
         </li>
         <li>
-          <Link href="/">Sign in</Link>
+          <Link href="https://arena-experience-frontend.vercel.app/login" target='__blank'>Login</Link>
         </li>
       </NavbarTwoColumns>
     </Section>
@@ -26,14 +27,14 @@ const Hero = () => (
       <HeroOneButton
         title={
           <>
-            {'The modern landing page for\n'}
-            <span className="text-primary-500">React developers</span>
+            {'Confirme sua presença nos eventos que acontecerão no\n'}
+            <span className="text-primary-500">Arena Experience</span>
           </>
         }
-        description="The easiest way to build a React landing page in seconds."
+        description="Confira as datas e quais eventos estão disponíveis para você participar."
         button={
-          <Link href="https://creativedesignsguru.com/category/nextjs/">
-            <Button xl>Download Your Free Theme</Button>
+          <Link href="https://arena-experience-frontend.vercel.app/register" target='__blank'>
+            <Button xl>Criar uma conta agora</Button>
           </Link>
         }
       />

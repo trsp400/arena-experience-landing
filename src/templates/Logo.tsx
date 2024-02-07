@@ -1,18 +1,19 @@
-import { AppConfig } from '../utils/AppConfig';
+import Image from 'next/image';
+// import { AppConfig } from '../utils/AppConfig';
 
 type ILogoProps = {
   xl?: boolean;
 };
 
 const Logo = (props: ILogoProps) => {
-  const size = props.xl ? '44' : '32';
+  // const size = props.xl ? '44' : '32';
   const fontStyle = props.xl
     ? 'font-semibold text-3xl'
     : 'font-semibold text-xl';
 
   return (
     <span className={`inline-flex items-center text-gray-900 ${fontStyle}`}>
-      <svg
+      {/* <svg
         className="mr-1 stroke-current text-primary-500"
         xmlns="http://www.w3.org/2000/svg"
         width={size}
@@ -30,7 +31,8 @@ const Logo = (props: ILogoProps) => {
         <path d="M4 20h14" />
       </svg>
 
-      {AppConfig.site_name}
+      {AppConfig.site_name} */}
+      <Image src={'/sara-logo.png'} alt="Sara Nossa Terra - Logo" width={84} height={84} />
     </span>
   );
 };
